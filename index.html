@@ -7,51 +7,122 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css">
   <style>
-    /* custom.css の内容をここに直接記述するか、別途ファイルとして読み込む */
+    /* 全体のフォントと背景色 */
+    body {
+      font-family: 'Noto Sans JP', 'Yu Gothic', sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* 見出しのスタイル */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      color: #1e3a8a; /* 濃い青 */
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .reveal h1 {
+      font-size: 3em;
+    }
+
+    .reveal h2 {
+      font-size: 2.2em;
+    }
+
+    .reveal h3 {
+      font-size: 1.6em;
+      color: #b91c1c; /* 濃いめの赤 */
+    }
+
+    .reveal h4 {
+      font-size: 1.3em;
+      color: #1e40af; /* やや明るい青 */
+    }
+
+    /* 段落のスタイル */
+    .reveal p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    /* 画像のスタイル */
     .reveal section img {
-      max-height: 450px; /* 画像の高さ調整 */
-      margin: 15px 0px; /* 画像の上下の余白 */
-      border-radius: 8px; /* 角を丸くする */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 影を追加 */
+      max-width: 100%;
+      height: auto; /* CSSで高さを自動調整 */
+      border-radius: 10px; /* 角を丸くする */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 影を追加 */
+      margin: 20px 0; /* 上下の余白 */
     }
-    .reveal h1, .reveal h2, .reveal h3 {
-      color: #333;
-      text-shadow: none;
+
+    /* リストのスタイル */
+    .reveal ul {
+      padding-left: 1.2em;
     }
+
     .reveal ul li {
-      margin-bottom: 10px;
-      font-size: 0.9em;
-    }
-    .reveal strong {
-      color: #e67e22; /* 強調色 */
-    }
-    .reveal .slides section p {
+      margin-bottom: 0.6em;
       font-size: 1.1em;
-      line-height: 1.5;
     }
+
+    /* グルメ紹介セクションのグリッドレイアウト */
     .food-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      /* 画面幅に合わせて列数を自動調整、最小180px、最大1fr */
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px; /* グリッドアイテム間の隙間 */
       margin-top: 20px;
     }
+
     .food-grid div {
-      flex: 1 1 45%; /* 2列表示 */
-      max-width: 45%;
+      background-color: #f9fafb; /* 薄いグレーの背景 */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 軽い影 */
       text-align: center;
     }
+
+    .food-grid h4 {
+      color: #dc2626; /* 赤 */
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    /* 各スライドセクションのパディング */
+    .reveal .slides section {
+      padding: 20px;
+    }
+
+    /* プログレスバーのスタイル */
+    .reveal .progress {
+      background-color: #dc2626 !important; /* 赤 */
+      height: 5px;
+    }
+
+    /* コントロールボタンのスタイル */
+    .reveal .controls {
+      color: #1e3a8a !important; /* 濃い青 */
+    }
+
+    /* 観光・体験の魅力セクションの画像レイアウト調整 */
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+      flex-wrap: wrap; /* 小さい画面で折り返す */
+    }
+    .flex-container img {
+      width: 45%; /* 各画像の幅 */
+      max-width: 400px; /* 最大幅を設定して大きくなりすぎないようにする */
+      height: auto; /* 高さを自動調整 */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin: 10px; /* 画像間の余白 */
+    }
+
+    /* グルメ画像の高さ調整 */
     .food-grid img {
-      width: 100%;
       height: 150px; /* 画像の高さを固定 */
       object-fit: cover; /* 画像がはみ出さないように調整 */
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .food-grid h4 {
-      margin-top: 10px;
-      margin-bottom: 5px;
-      font-size: 1.1em;
     }
   </style>
 </head>
@@ -108,9 +179,9 @@
           <li>世界遺産「東大寺」や「春日大社」の歴史建築</li>
           <li>風情ある「ならまち」の散策体験</li>
         </ul>
-        <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 20px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Nara_Park_with_deer.jpg" alt="奈良公園の鹿" style="width: 45%; border-radius: 8px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/T%C5%8Ddai-ji_Daibutsuden_01.jpg" alt="東大寺大仏殿" style="width: 45%; border-radius: 8px;">
+        <div class="flex-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Nara_Park_with_deer.jpg" alt="奈良公園の鹿の画像">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/T%C5%8Ddai-ji_Daibutsuden_01.jpg" alt="東大寺大仏殿の画像">
         </div>
       </section>
 
@@ -119,19 +190,19 @@
         <div class="food-grid">
           <div>
             <h4>柿の葉寿司</h4>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Kakinoha-zushi.jpg" alt="柿の葉寿司">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Kakinoha-zushi.jpg" alt="柿の葉寿司の画像">
           </div>
           <div>
             <h4>三輪そうめん</h4>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Miwa_somen.jpg/1280px-Miwa_somen.jpg" alt="三輪そうめん">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Miwa_somen.jpg/1280px-Miwa_somen.jpg" alt="三輪そうめんの画像">
           </div>
           <div>
             <h4>大仏プリン</h4>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Daibutsu_Purin.jpg" alt="大仏プリン">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Daibutsu_Purin.jpg" alt="大仏プリンの画像">
           </div>
           <div>
             <h4>奈良漬け</h4>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Narazuke.jpg/1280px-Narazuke.jpg" alt="奈良漬け">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Narazuke.jpg/1280px-Narazuke.jpg" alt="奈良漬けの画像">
           </div>
         </div>
         <p style="margin-top: 20px;">和風スイーツや町家カフェも充実しており、古都の味覚を堪能できます。</p>
