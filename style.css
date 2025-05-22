@@ -81,3 +81,12 @@ h1, h2, p {
   transform: translateY(0);
   opacity: 1;
 }
+/* パララックス風の背景横スライド */
+.slide-parallax::before {
+  animation: pan-left 20s linear infinite;
+}
+
+@keyframes pan-left {
+  0% { background-position: center; }
+  100% { background-position: right center; }
+}
