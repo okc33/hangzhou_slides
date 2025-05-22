@@ -118,3 +118,17 @@ h1, h2, p {
   0% { background-position: center; }
   100% { background-position: right center; }
 }
+.fade-text {
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideDownFade 1s ease-out forwards;
+}
+
+@keyframes slideDownFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
