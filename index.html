@@ -3,255 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>奈良研修旅行プレゼン</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css">
-  <style>
-    /* 全体のフォントと背景色 */
-    body {
-      font-family: 'Noto Sans JP', 'Yu Gothic', sans-serif;
-      background-color: #ffffff;
-    }
-
-    /* 見出しのスタイル */
-    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-      color: #1e3a8a; /* 濃い青 */
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .reveal h1 {
-      font-size: 3em;
-    }
-
-    .reveal h2 {
-      font-size: 2.2em;
-    }
-
-    .reveal h3 {
-      font-size: 1.6em;
-      color: #b91c1c; /* 濃いめの赤 */
-    }
-
-    .reveal h4 {
-      font-size: 1.3em;
-      color: #1e40af; /* やや明るい青 */
-    }
-
-    /* 段落のスタイル */
-    .reveal p {
-      font-size: 1.2em;
-      line-height: 1.6;
-    }
-
-    /* 画像のスタイル */
-    .reveal section img {
-      max-width: 100%;
-      height: auto; /* CSSで高さを自動調整 */
-      border-radius: 10px; /* 角を丸くする */
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 影を追加 */
-      margin: 20px 0; /* 上下の余白 */
-    }
-
-    /* リストのスタイル */
-    .reveal ul {
-      padding-left: 1.2em;
-    }
-
-    .reveal ul li {
-      margin-bottom: 0.6em;
-      font-size: 1.0em; /* フォントサイズを少し小さく調整 */
-      line-height: 1.4; /* 行の高さを調整 */
-    }
-
-    /* グルメ紹介セクションのグリッドレイアウト */
-    .food-grid {
-      display: grid;
-      /* 画面幅に合わせて列数を自動調整、最小180px、最大1fr */
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px; /* グリッドアイテム間の隙間 */
-      margin-top: 20px;
-    }
-
-    .food-grid div {
-      background-color: #f9fafb; /* 薄いグレーの背景 */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 軽い影 */
-      text-align: center;
-    }
-
-    .food-grid h4 {
-      color: #dc2626; /* 赤 */
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
-
-    /* 各スライドセクションのパディング */
-    .reveal .slides section {
-      padding: 20px;
-    }
-
-    /* プログレスバーのスタイル */
-    .reveal .progress {
-      background-color: #dc2626 !important; /* 赤 */
-      height: 5px;
-    }
-
-    /* コントロールボタンのスタイル */
-    .reveal .controls {
-      color: #1e3a8a !important; /* 濃い青 */
-    }
-
-    /* 観光・体験の魅力セクションの画像レイアウト調整 */
-    .flex-container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin-top: 20px;
-      flex-wrap: wrap; /* 小さい画面で折り返す */
-    }
-    .flex-container img {
-      width: 45%; /* 各画像の幅 */
-      max-width: 400px; /* 最大幅を設定して大きくなりすぎないようにする */
-      height: auto; /* 高さを自動調整 */
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      margin: 10px; /* 画像間の余白 */
-    }
-
-    /* グルメ画像の高さ調整 */
-    .food-grid img {
-      height: 150px; /* 画像の高さを固定 */
-      object-fit: cover; /* 画像がはみ出さないように調整 */
-    }
-  </style>
+  <title>杭州スマートシティ研修旅行</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
 
-      <section>
-        <h1>奈良研修旅行プレゼン</h1>
-        <h3>〜古都と未来を学ぶ旅〜</h3>
-        <p>名古屋発着・1泊2日のスマートシティ視察</p>
-      </section>
-
-      <section>
-        <h2>奈良を選んだ理由</h2>
-        <ul>
-          <li>歴史都市とスマートシティの融合モデル</li>
-          <li>市民参加型DXの先進事例が豊富（例：地域課題解決プラットフォームなど）</li>
-          <li>交通の便が良く、コストパフォーマンスに優れる</li>
-        </ul>
-      </section>
-
-      <section>
-        <section>
-          <h2>見学候補1：平城宮跡歴史公園</h2>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Suzakumon_Heijokyu_Nara.jpg" alt="平城宮跡の朱雀門">
-          <p>古代日本の都をスマート化で再現</p>
-        </section>
-        <section>
-          <h3>主な見学内容と学習成果</h3>
-          <ul>
-            <li>**AR・VR体験施設:** デジタル技術による文化財の復元・活用方法を体験的に学ぶ。</li>
-            <li>**デジタルガイド・MaaS導入例:** 観光地における最新の移動・情報提供サービスを考察。</li>
-            <li>**朱雀門ひろば内の地域DX事例:** 地域店舗連携アプリやイベント情報配信システムなど、地域活性化へのデジタル活用事例を学ぶ。</li>
-          </ul>
-        </section>
-      </section>
-
-      <section>
-        <h2>見学候補2：奈良市役所スマートシティ推進室</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Nara_City_Hall_at_night.jpg" alt="奈良市役所">
-        <p>スマート行政の現場での学びと未来への展望</p>
-        <ul>
-          <li>**オープンデータ活用:** 「奈良市オープンデータプラットフォーム」を通じたデータ公開と利活用事例を学ぶ。</li>
-          <li>**住民参加型の都市計画:** 市民向けワークショップやオンラインプラットフォームによる意見収集の仕組みを考察。</li>
-          <li>**現地担当者へのインタビュー（要調整）:** スマートシティ推進における行政の役割、課題、今後の展望について直接伺い、実践的な知見を得る。</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>観光・体験の魅力</h2>
-        <ul>
-          <li>鹿とふれあえる奈良公園</li>
-          <li>世界遺産「東大寺」や「春日大社」の歴史建築</li>
-          <li>風情ある「ならまち」の散策体験</li>
-        </ul>
-        <div class="flex-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Nara_Park_with_deer.jpg" alt="">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/T%C5%8Ddai-ji_Daibutsuden_01.jpg" alt="">
-        </div>
-      </section>
-
-      <section>
-        <h2>奈良グルメ紹介</h2>
-        <div class="food-grid">
-          <div>
-            <h4>柿の葉寿司</h4>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Kakinoha-zushi.jpg" alt="">
-          </div>
-          <div>
-            <h4>三輪そうめん</h4>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Miwa_somen.jpg/1280px-Miwa_somen.jpg" alt="">
-          </div>
-          <div>
-            <h4>大仏プリン</h4>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Daibutsu_Purin.jpg" alt="">
-          </div>
-          <div>
-            <h4>奈良漬け</h4>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Narazuke.jpg/1280px-Narazuke.jpg" alt="">
-          </div>
-        </div>
-        <p style="margin-top: 20px;">和風スイーツや町家カフェも充実しており、古都の味覚を堪能できます。</p>
-      </section>
-
-      <section>
-        <h2>スケジュール案</h2>
-        <ul>
-          <li>**1日目:** 名古屋駅出発（近鉄特急で約2時間10分）→奈良到着・昼食→スマートシティ施設見学（平城宮跡、奈良市役所）→ならまち散策→宿泊（ゲストハウス予定）</li>
-          <li>**2日目:** 観光地見学（奈良公園、東大寺など）→昼食→奈良出発→名古屋へ帰着</li>
-        </ul>
-        <p>交通：近鉄特急（名古屋から乗り換えなし）／宿泊：費用を抑えたゲストハウスを予定</p>
-      </section>
-
-      <section>
-        <h2>費用概算（1人あたり）</h2>
-        <ul>
-          <li>交通費：約7,000円（近鉄特急往復）</li>
-          <li>宿泊費：約5,000円（ゲストハウス利用）</li>
-          <li>食事・入場料等：約3,000円</li>
-        </ul>
-        <p><strong>総額：驚きの約15,000円！</strong>（学生に優しい価格設定で、費用効率も抜群です）</p>
-      </section>
-
-      <section>
-        <h2>まとめ</h2>
-        <ul>
-          <li>奈良は歴史×未来の学びができる理想的な都市</li>
-          <li>予算・アクセス・教育効果の全てを満たす</li>
-        </ul>
-        <p>研修旅行先として、ぜひ奈良を！</p>
-      </section>
-
+  <!-- スライド1 -->
+  <section class="slide slide1">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>中国・杭州スマートシティ研修旅行</h1>
+      <p>都市を動かすAIの現場へ</p>
     </div>
-  </div>
+  </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
-  <script>
-    Reveal.initialize({
-      hash: true,
-      transition: 'slide',
-      transitionSpeed: 'slow',
-      controls: true,
-      progress: true,
-      center: true,
-      // 履歴APIに関するSecurityErrorを回避するため、history機能を無効化します。
-      history: false
-    });
-  </script>
+  <!-- スライド2 -->
+  <section class="slide slide2">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>訪問先の妥当性と具体性</h2>
+      <p>ET City Brain、アリババ本社、スマート街区など具体的で現実的な視察先</p>
+      <p>日本では体験できない都市AIの社会実装を現地で体感</p>
+    </div>
+  </section>
+
+  <!-- スライド3 -->
+  <section class="slide slide3">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>教育的価値</h2>
+      <p>スマート交通・キャッシュレス社会・情報規制の現実を体験</p>
+      <p>都市政策やDXの理解を深め、多文化理解の場としても有意義</p>
+    </div>
+  </section>
+
+  <!-- スライド4（ちょっとパララックス風） -->
+  <section class="slide slide4">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>意外と近くて安い</h2>
+      <p>名古屋から上海まで約2時間40分、沖縄とほぼ同じ</p>
+      <p>航空券＋宿泊＋現地移動＋通訳費すべて込みで48,000円以内</p>
+    </div>
+  </section>
+
+  <!-- スライド5 -->
+  <section class="slide slide5">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>今行くべき理由</h2>
+      <p>ビザ免除の再開、安価なパスポート申請、卒業旅行準備として最適</p>
+      <p>今だけのチャンスを最大の学びに</p>
+    </div>
+  </section>
+
 </body>
 </html>
