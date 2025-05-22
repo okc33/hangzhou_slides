@@ -124,4 +124,20 @@ A4. 国内では絶対に得られない体験と教育効果がある。**費�
 
 > 「なぜ中国？」「なぜ今？」に対して、技術・費用・教育効果の3点からしっかり答えられる企画です。<br>
 > 未来を見に行く2泊3日、杭州で“本物の都市”を見てみませんか？
+> 
+## 使用画像の出典（クレジット）
+
+以下の画像はライセンスに基づき、クレジット任意の画像として利用しています。
+
+- TimJ（Unsplash）  
+  https://unsplash.com/photos/eCBRy4PUc5g
+- Kun Fotografi（Pexels）  
+  https://www.pexels.com/photo/faxi-temple-in-hangzhou-in-china-14370888/
+- Timo Volz（Pexels）  
+  https://www.pexels.com/photo/3650339/
+- zhang kaiyv（Pexels）  
+  https://www.pexels.com/photo/745243/
+-iStock.com/zhangyang13576997233
+ https://www.istockphoto.com/jp/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E6%9C%AC%E7%A4%BE-gm1027220048-275425472
+
 
