@@ -88,3 +88,10 @@ h1, h2, p {
   bottom: 10%;
   right: 10%;
 }
+.alibaba-slide {
+  background-image: url('img/alibaba.jpg');
+  background-size: cover;
+  background-position: top center; /* ← 上部を表示するように修正 */
+  position: relative;
+  height: 100vh;
+}
