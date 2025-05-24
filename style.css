@@ -191,4 +191,20 @@ body, html {
     transform: translateY(0);
   }
 }
+.real-experience-list {
+  list-style-type: none;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: 1.1em;
+  line-height: 1.8;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #1f2937;
+}
+
+.real-experience-list li {
+  margin-bottom: 1rem;
+}
 
