@@ -6,25 +6,25 @@ body, html {
   overflow-x: hidden;
 }
 
-/* テキストフェード */
+/* アニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .fade-text {
   color: white;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-  animation: fadeIn 1.5s ease-out both;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1s ease forwards;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* アリババスライド内の画像とキャプション */
+/* Alibabaスライドの画像配置 */
 .overlay {
   position: relative;
   width: 100%;
@@ -39,15 +39,8 @@ body, html {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.left-img {
-  top: 20%;
-  left: 10%;
-}
-
-.right-img {
-  bottom: 15%;
-  right: 10%;
-}
+.left-img { top: 20%; left: 10%; }
+.right-img { bottom: 15%; right: 10%; }
 
 .caption {
   position: absolute;
@@ -56,17 +49,10 @@ body, html {
   font-size: 1.2em;
   text-shadow: 1px 1px 5px black;
 }
+.left-caption { top: 50%; left: 10%; }
+.right-caption { bottom: 10%; right: 10%; }
 
-.left-caption {
-  top: 50%;
-  left: 10%;
-}
-
-.right-caption {
-  bottom: 10%;
-  right: 10%;
-}
-/* 上海観光スライド用 */
+/* 上海観光スライドの見出し */
 .shanghai-overlay {
   position: relative;
   width: 100%;
@@ -85,6 +71,8 @@ body, html {
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
+
+/* 汎用カードコンテナ */
 .card-container {
   display: flex;
   justify-content: center;
@@ -93,67 +81,22 @@ body, html {
   margin-top: 2rem;
 }
 
+/* 丸型カードデザイン */
 .circle-card {
   background-color: white;
-  color: #1f2937;
-  border: 3px solid #e5e7eb;
-  border-radius: 50%;
-  width: 260px;
-  height: 260px;
-  text-align: center;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: transform 0.3s;
-}
-
-.circle-card:hover {
-  transform: translateY(-5px);
-}
-
-.circle-number {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #6b7280;
-  margin-bottom: 0.5rem;
-}
-
-.circle-card h3 {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 0.5rem 0;
-}
-
-.circle-card p {
-  font-size: 0.95em;
-  line-height: 1.4;
-}
-.card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.circle-card {
-  background-color: white;
-  color: #1f2937;
-  border: 3px solid #ccc;
+  color: #333;
   border-radius: 50%;
   width: 240px;
   height: 240px;
+  padding: 1.2rem;
   text-align: center;
-  padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
-  position: relative;
+  border: 3px solid #ccc;
 }
 
 .circle-card:hover {
@@ -163,7 +106,7 @@ body, html {
 .circle-number {
   font-size: 1.1em;
   font-weight: bold;
-  color: #888;
+  color: #999;
   margin-bottom: 0.3rem;
 }
 
@@ -179,18 +122,7 @@ body, html {
   margin: 0;
 }
 
-.fade-text {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 1s ease forwards;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* リスト型の体験箇条書き */
 .real-experience-list {
   list-style-type: none;
   padding: 2rem;
@@ -207,71 +139,11 @@ body, html {
 .real-experience-list li {
   margin-bottom: 1rem;
 }
-.card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
 
-.circle-card {
-  background-color: white;
-  color: #696969;
-  border: 3px solid #ccc;
-  border-radius: 50%;
-  width: 240px;
-  height: 240px;
-  text-align: center;
-  padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
-  position: relative;
-}
-
-.circle-card:hover {
-  transform: translateY(-5px);
-}
-
-.circle-number {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #999;
-  margin-bottom: 0.3rem;
-}
-
-.circle-card h3 {
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.circle-card p {
-  font-size: 0.9em;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.fade-text {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 1s ease forwards;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* ベージュ背景の全画面スライド */
+/* ベージュ背景スライド */
 .beige-slide {
   background-color: #ffefd5;
-  color: #444444; /* 白ではなく濃いグレー系 */
+  color: #444;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -281,59 +153,8 @@ body, html {
   padding: 2rem;
 }
 
-/* タイトル */
 .slide-title {
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #444;
 }
-
-/* カード配置 */
-.card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-/* 丸カード */
-.circle-card {
-  background-color: white;
-  color: #333;
-  border-radius: 50%;
-  width: 240px;
-  height: 240px;
-  padding: 1.2rem;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-
-.circle-card:hover {
-  transform: translateY(-5px);
-}
-
-.circle-number {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #999;
-  margin-bottom: 0.3rem;
-}
-
-.circle-card h3 {
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.circle-card p {
-  font-size: 0.9em;
-  line-height: 1.4;
-  margin: 0;
-}
-
-
