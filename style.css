@@ -335,4 +335,48 @@ body, html {
   line-height: 1.4;
   margin: 0;
 }
+/* スライド7用のデザイン */
+.slide-real {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.real-title {
+  font-size: 2.2em;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.real-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.real-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem;
+  width: 280px;
+  max-width: 90%;
+  text-align: left;
+}
+
+.real-box h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.real-box p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
 
