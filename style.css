@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
 body, html {
   margin: 0;
   padding: 0;
@@ -43,4 +45,22 @@ body, html {
   padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+}
+
+/* スケジュール表のスタイル */
+.schedule-table {
+  width: 80%;
+  margin: 1em auto;
+  border-collapse: collapse;
+  color: #000;
+}
+
+.schedule-table th, .schedule-table td {
+  border: 1px solid #555;
+  padding: 0.5em 0.8em;
+  text-align: left;
+}
+
+.schedule-table th {
+  background: #f0f0f0;
 }
