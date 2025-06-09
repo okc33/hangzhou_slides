@@ -82,13 +82,17 @@
 
   <script>
     Reveal.initialize({
-      hash: true,
-      transition: 'zoom',
-      backgroundTransition: 'zoom',
-      controls: true,
-      progress: true,
-      center: true
-    });
+  hash: true,
+  transition: 'zoom',
+  backgroundTransition: 'zoom',
+  controls: true,
+  progress: true,
+  center: false, // ←中央揃えOFFで見切れ対策
+  width: "100%",
+  height: "100%",
+  margin: 0.1 // スライド余白確保
+});
+
   </script>
 
 </body>
