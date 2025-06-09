@@ -49,15 +49,16 @@ body, html {
 
 /* スケジュール表のスタイル */
 .schedule-table {
-  width: 80%;
-  margin: 1em auto;
+  width: 90%;
+  margin: 0.5em auto;
   border-collapse: collapse;
   color: #000;
+  font-size: 0.95em;
 }
 
 .schedule-table th, .schedule-table td {
   border: 1px solid #555;
-  padding: 0.5em 0.8em;
+  padding: 0.3em 0.6em;
   text-align: left;
 }
 
