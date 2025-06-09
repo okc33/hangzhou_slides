@@ -44,20 +44,3 @@ body, html {
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
-/* スライド領域全体の横幅見切れ防止 */
-.reveal, .slides {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-/* スライド内テキストがウィンドウに収まるように調整 */
-.reveal .slides section {
-  padding: 2vh 2vw;
-  box-sizing: border-box;
-}
-
-/* 背景画像が画面にフィットしやすいように制御（必要に応じて） */
-.reveal .slides section {
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-}
