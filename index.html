@@ -7,6 +7,7 @@
   <title>上海・杭州スマートシティ研修旅行</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,7 +21,10 @@
   </section>
 
   <!-- スライド2：地図 -->
-  <section data-background-image="img/slide2.jpg" data-background-size="cover" data-background-transition="fade"></section>
+  <section data-background-color="#ffffff">
+    <h2 style="text-align: center;">杭州と上海の位置</h2>
+    <div id="map"></div>
+  </section>
 
 
   <!-- スライド3-->
@@ -135,6 +139,7 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
   <script>
     Reveal.initialize({
@@ -144,6 +149,22 @@
       controls: true,
       progress: true,
       center: true
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var map = L.map('map');
+      var bounds = L.latLngBounds([
+        [26, 114],
+        [38, 139]
+      ]);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+      map.fitBounds(bounds);
+      L.marker([31.2304, 121.4737]).addTo(map).bindPopup('上海');
+      L.marker([30.2741, 120.1551]).addTo(map).bindPopup('杭州');
     });
   </script>
 
