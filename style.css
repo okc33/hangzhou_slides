@@ -54,10 +54,10 @@ body, html {
 
 .budget-table {
   width: 90%;
-  max-width: 850px;          /* 横幅の上限を設定（全画面でも拡大しすぎない） */
-  margin: 1.5em auto 1.5em 5%; /* 少し左寄せ */
+  max-width: 850px;
+  margin: 1.5em 0 1.5em 5%;
   border-collapse: collapse;
-  font-size: 0.8em;           /* 小さめで画面に収まりやすく */
+  font-size: 0.8em;
   table-layout: auto;
 }
 
@@ -70,7 +70,7 @@ body, html {
   word-break: keep-all;
 }
 
-/* 項目・金額列だけ折り返しを禁止 */
+/* 項目・金額列は折り返し禁止 */
 .budget-table td:nth-child(1),
 .budget-table th:nth-child(1),
 .budget-table td:nth-child(2),
@@ -78,7 +78,10 @@ body, html {
   white-space: nowrap;
 }
 
-/* ヘッダー行（見出し）の高さを抑える */
+/* ヘッダー行の背景を薄グレーに戻す */
 .budget-table thead th {
+  background-color: #f2f2f2;
+  color: #333;
   padding: 0.3em 0.6em;
+  font-weight: bold;
 }
