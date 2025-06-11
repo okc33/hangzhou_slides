@@ -70,11 +70,19 @@ body, html {
   word-break: keep-all;
 }
 
-/* 項目列だけ折り返し禁止にする */
-.budget-table td:first-child,
-.budget-table th:first-child {
+/* 1列目（項目）と2列目（金額）だけ折り返し禁止 */
+.budget-table td:nth-child(1),
+.budget-table th:nth-child(1),
+.budget-table td:nth-child(2),
+.budget-table th:nth-child(2) {
   white-space: nowrap;
 }
+
+/* ヘッダー行（1行目）の高さを抑える */
+.budget-table thead th {
+  padding: 0.3em 0.6em;
+}
+
 
 .budget-table th {
   background-color: #f2f2f2;
