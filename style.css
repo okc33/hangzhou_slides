@@ -92,3 +92,26 @@ body, html {
   white-space: normal; /* 折り返し許可 */
   word-break: keep-all; /* 単語の途中で折らない（日本語対応） */
 }
+/* コンパクト＆左寄せ予算表スタイル */
+.budget-table {
+  width: 90%;
+  margin: 1.5em 0 1.5em 5%; /* 左寄せにする */
+  border-collapse: collapse;
+  font-size: 0.85em; /* 全体をやや小さめに */
+  table-layout: auto;
+}
+
+.budget-table th,
+.budget-table td {
+  border: 1px solid #ccc;
+  padding: 0.4em 0.8em;
+  text-align: left;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.budget-table th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
