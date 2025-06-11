@@ -52,23 +52,28 @@ body, html {
   height: 500px;
 }
 
-/* 予算表 */
+/* 予算表スタイル */
 .budget-table {
   width: 80%;
-  margin: 1em auto;
+  margin: 2em auto;
   border-collapse: collapse;
-  transform: scale(2, 0.5);
-  transform-origin: center top;
+  font-size: 1.1em;
+  table-layout: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .budget-table th,
 .budget-table td {
   border: 1px solid #ccc;
-  padding: 0.5em 1em;
+  padding: 1em 1.5em;
   text-align: center;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .budget-table th {
   background-color: #f2f2f2;
   color: #333;
+  font-weight: bold;
 }
+
